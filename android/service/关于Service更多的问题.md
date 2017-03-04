@@ -135,9 +135,9 @@ public void pausePlayback() {
     只会阻塞该进程中的主线程，并不会影响到当前的应用程序
 
 ## Q7.1那既然远程Service这么好用，干脆以后我们把所有的Service都转换成远程Service吧，还省得再开启线程了?
-    远程Service非但不好用，甚至可以称得上是较为难用。一般情况下如果可以不使用远程Service，
-    就尽量不要使用它。在使用Start Service方式开启远程service不会崩溃，但是使用bindservice
-    方式会崩溃。这是由于用Bind Service我们会让MainActivity和MyService建立关联，但是目前MyService已经是一个远程Service了，Activity和Service运行在两个不同的进程当中，这时就不能再使用传统的建立关联的方式，程序也就崩溃了。
+
+远程Service非但不好用，甚至可以称得上是较为难用。一般情况下如果可以不使用远程Service，
+就尽量不要使用它。在使用Start Service方式开启远程service不会崩溃，但是使用bindservice方式会崩溃。这是由于用Bind Service我们会让MainActivity和MyService建立关联，但是目前MyService已经是一个远程Service了，Activity和Service运行在两个不同的进程当中，这时就不能再使用传统的建立关联的方式，程序也就崩溃了。
 
 ## Q7.2如何才能让Activity与一个远程Service建立关联呢?
     有办法，使用AIDL来进行跨进程通信
