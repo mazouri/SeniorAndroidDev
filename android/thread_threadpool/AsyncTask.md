@@ -1,0 +1,48 @@
+#AsyncTask
+
+[AsyncTask源码](http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/5.1.1_r1/android/os/AsyncTask.java#AsyncTask)
+
+##1. 简单描述
+为了简化在子线程中访问UI的过程，系统提供了AsyncTask，AsyncTask经过几次修改，导致了对于不同的API版本AsyncTask具有不同的表现，尤其是任务的并发执行上。由于这个原因，很多开发者对于AsyncTask的使用上存在误区。
+
+AsyncTask是一种轻量级的异步任务类，它可以在线程池中执行后台任务，然后把执行的进度和最终结果传递给主线程并在主线程中更新UI。
+
+从实现上来说，AsyncTask封装了Thread和Handler，通过AsyncTask可以更加方便地执行后台任务以及在主线程中访问UI，但是AsyncTask并不适合进行特别耗时的后台任务，对于特别耗时的任务来说，建议使用线程池。
+
+##2. AsyncTask这个类
+AsyncTask是一个抽象的泛型类，它提供了Params、Progress和Result这三个泛型参数，其中Params表示参数的类型，Progress表示后台任务执行进度的类型，而Result则表示后台任务的返回结果的类型，如果AsyncTask确实不需要传递具体的参数，那么这三个泛型参数可以用Void来代替。
+AsyncTask类的声明如下：
+```
+public abstract class AsyncTask<Params, Progress, Result>
+```
+
+AsyncTask提供了4个核心方法，分别是onPreExecute, doInBackground, onProgressUpdate, onPostExecute。
+
+onPreExecute方法在主线程中执行，在异步任务执行之前，此方法会被调用，一般可以用于做一些准备工作。
+doInBackground(Params...params)在线程池中执行，此方法用于执行异步任务，params参数表示异步任务的输入参数。在此方法中可以通过publishProgress方法来更新任务的进度，publishProgress方法会调用onProgressUpdate方法，另外此方法需要返回计算结果给onPostExecute方法。
+onProgressUpdate(Progress...values)在主线程中执行，当后台任务的执行进度发生改变时，此方法会被调用。
+onPostExecute(Result result)在主线程中执行，在异步任务执行之后，此方法会被调用，其中result参数是后台任务的返回值，即doInBackground的返回值。
+
+上面这几个方法，onPreExecute现执行，接着是doInBackground，最后才是onPostExecute，除了上述四个方法以外，AsyncTask还提供了onCancelled方法，它同样在主线程中执行，当异步任务被取消时，onCancelled方法会被调用，这个时候onPostExecute则不会被调用。
+
+##3. AsyncTask使用中的限制
+AsyncTask在具体的使用过程中有一些条件限制，主要有这些:
+1. AsyncTask的类必须在主线程中加载，这就意味着在第一次访问AsyncTask必须发生在主线程，当然这个过程在Android4.1及以上版本中已经被系统自动完成了。在Android5.0的源码中，可以查看ActivityThread的main方法，它会调用AsyncTask的init方法，这就满足了AsyncTask的类必须在主线程中进行加载这个条件了。至于为什么要满足这个条件，可以从AsyncTask中看出。（[为什么需要在主线程加载]()）
+2. AsyncTask的对象必须在主线程中创建。
+3. execute方法必须在UI线程调用
+4. 不要在程序中直接调用onPreExecute、 onPostExecute、doInBackgroud和onProgressUpdate方法
+5. 一个AsyncTask对象只能执行一次，也就是只能调用一次execute方法，否则会报运行时异常。
+6. 在Android1.6之前，AsyncTask是串行执行任务的 ，Android1.6的时候AysncTask开始采用线程池里处理并行任务，但是从Android3.0开始，为了避免AsyncTask所带来的并发错误，AsyncTask又采用一个线程来串行执行任务。尽管如此，在Android3.0以及后续版本中，我们仍然可以通过AsyncTask的executeOnExecutor方法来并行地执行任务。
+
+##4.AsyncTask的工作原理
+讲到AsyncTask的工作原理，我们可以从它的exeute方法开始分析，execute方法又调用executeOnExecutor方法，同时，会传给它一个串行的线程池sDefaultExecutor参数，一个进程中所有的AsyncTask全部在这个串行的线程池中排列执行，在executeOnExecutor方法中，AsyncTask的onPreExecute方法最先执行，然后线程池开始执行，这个线程池sDefaultExecutor是AysncTask的内部类SerialExecutor的一个实例，SerialExecutor实现了AsyncTask的排列执行的过程。
+首先，系统会把AysncTask的Params参数封装为FutureTask对象，FutureTask是一个并发类，在这里，它充当Runnable的作用。接着这个FutureTask会交给SerialExecutor的execute方法去处理，SerialExecutor的execute方法首先会把FutureTask对象插入到任务队列mTasks中，如果这个时候没有正在活动的AsyncTask任务，那么就会调用SerialExecutor的scheduleNext方法来执行下一个AsyncTask任务。同时，当一个AsyncTask任务执行完后，AsyncTask会继续执行其他任务直到所有的任务都被执行为止，从这一点可以看出，默认情况下，AsyncTask是串行执行的。
+
+AsyncTask中有两个线程池（SerialExecutor和THREAD_POOL_EXECUTOR）和一个Handler（InternalHandler），其中线程池SerialExecutor用于任务的排列，而线程池THREAD_POOL_EXECUTOR用于真正地执行任务，InternalHandler用于将执行环境从线程池切换到主线程，本质上是线程的调度过程。在AsyncTask的构造方法中，由于FutureTask的run方法会调用mWorker的call方法，因此mWorker的call方法最终在线程池中执行。
+在mWorker的call方法中，首先将当前任务标记为已经被调用过了，然后执行AsyncTask的doInBackground方法，接着将其返回值传递给postResult方法。在postResult方法会通过InternalHandler发送消息，在handler中调用AsyncTask的finish方法，在finish方法中，如果AsyncTask是被取消执行，就调用onCancelled方法，否则就会调用onPostExecute方法。
+可以看到doInBackground的返回结果会传递给onPostExecute方法，到这里，AsyncTask的整个工作过程就分析完了。
+
+
+##使用AsyncTask的简单事例
+P393 DownloadFile
+
