@@ -7,7 +7,7 @@
 
 AsyncTask是一种轻量级的异步任务类，它可以在线程池中执行后台任务，然后把执行的进度和最终结果传递给主线程并在主线程中更新UI。
 
-从实现上来说，AsyncTask封装了Thread和Handler，通过AsyncTask可以更加方便地执行后台任务以及在主线程中访问UI，但是AsyncTask并不适合进行特别耗时的后台任务，对于特别耗时的任务来说，建议使用线程池。
+从实现上来说，AsyncTask封装了Thread和Handler，通过AsyncTask可以更加方便地执行后台任务以及在主线程中访问UI，但是AsyncTask并不适合进行特别耗时的后台任务，因为AsyncTask核心线程只有CPU_COUNT + 1个，线程池最大容量为CPU_COUNT * 2 + 1个，缓冲队列是128个，换句话说，一旦做出超出这个线程池最大容纳量，就会造成后续的线程进入到阻塞状态。对于特别耗时的任务来说，建议使用线程池。
 
 ##2. AsyncTask这个类
 AsyncTask是一个抽象的泛型类，它提供了Params、Progress和Result这三个泛型参数，其中Params表示参数的类型，Progress表示后台任务执行进度的类型，而Result则表示后台任务的返回结果的类型，如果AsyncTask确实不需要传递具体的参数，那么这三个泛型参数可以用Void来代替。

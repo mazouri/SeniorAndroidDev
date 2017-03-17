@@ -1,0 +1,7 @@
+#IntentService
+
+[源码](http://www.grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/5.1.1_r1/android/app/IntentService.java#IntentService)
+
+IntentService是一个继承自Service的抽象类，必须创建其子类才能使用。IntentService可用于执行后台耗时的任务，当任务执行后它会自动停止，同时由于IntentService是服务的原因，这导致它的优先级比单纯的线程要高很多，所以比较适合执行一些高优先级的后台任务。
+
+IntentService的onCreate方法中会创建HandlerThread，并使用HandlerThread的Looper来构造一个Handler对象ServiceHandler，这样通过ServiceHandler对象发送的消息最终都会在HandlerThread中执行。IntentService会将Intent封装到Message中，通过ServiceHandler发送出去，在ServiceHandler的handleMessage方法中会调用IntentService的抽象方法onHandleIntent，所以IntentService的子类都要是实现这个方法。
