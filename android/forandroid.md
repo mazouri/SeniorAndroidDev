@@ -9,7 +9,8 @@ JNI和NDK、性能优化、Apk瘦身、java虚拟机
 ## 1.设计模式问题
 
 1.1 你常用的设计模式有哪些？如何来重构，优化你的代码？
-http://www.jianshu.com/p/72d2e3491346
+
+[解题思路](https://github.com/mazouri/SeniorAndroidDev/blob/master/android/dp_in_android/README.md)
 
 1.2 说说MVP，MVC，MVVM架构的不同
 
