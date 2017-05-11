@@ -1,5 +1,11 @@
 #ForAndroid
 
+类别：设计模式（项目架构）、Activity、Service（AIDL）、Fragment、ContentProvider、BroadcastReceiver、异步任务、
+Android启动过程、自定义View（View事件分发）、缓存机制、数据存储（SQLite）、消息处理机制、IPC机制（binder）、
+JSON XML、ListView和RecyclerView、OOM、ANR、TCP／UDP／HTTP／Socket、第三方库、适配、图片（Drawable和Bitmap）、
+LBS应用（百度、高德）、消息推送、热更新hotfix、RemoteViews、动画、Window和WindowManager、线程与线程池、
+JNI和NDK、性能优化、Apk瘦身、java虚拟机
+
 ##1.设计模式问题
 1.1 你常用的设计模式有哪些？如何来重构，优化你的代码？
 http://www.jianshu.com/p/72d2e3491346
@@ -303,6 +309,25 @@ http://www.jianshu.com/p/72d2e3491346
 3.怎么实现断点续传下载文件
 http://blog.csdn.net/wwj_748/article/details/20146869
 
+
+
+
+
+
+
+
+
+
+
+更多问题：
+1.ToolBar使用
+2.熟悉format里面的%1$s、%1$d吗？
+3.项目(app)结构资源文件(res)内mipmap是用来存放什么文件的？
+4.多进程架构该如何写？
+5.数据该如何保密？有几种解决方案？有什么优缺点？
+6.android的内存回收机制
+7.系统自带的音视频有什么问题？
+8.线程安全
 
 
 
