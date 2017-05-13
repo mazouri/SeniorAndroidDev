@@ -14,6 +14,8 @@
 
 3.观察者模式：定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都将收到通知并自动改变。
 
-详见：[观察者模式]()
+详见：[观察者模式](https://github.com/mazouri/EasyDesignPatterns/blob/master/Behavioral-patterns/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F.md)
 
+4.外观模式：要求一个子系统的外部与其内部的通信必须通过一个统一的对象进行。
 
+详见：[外观模式](https://github.com/mazouri/EasyDesignPatterns/blob/master/Structural-patterns/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F.md)
