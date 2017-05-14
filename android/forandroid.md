@@ -261,10 +261,15 @@ http://www.jianshu.com/p/089fb79e308b
 ## 24.TCP／UDP／HTTP
 ## 25.第三方库
 25.1常用哪些开源项目，说说最熟悉的一个？
+
+[Dagger相关的问题](https://github.com/mazouri/SeniorAndroidDev/blob/master/android/thirdlibrary/dagger/Dagger%E9%97%AE%E9%A2%98.md)
+
 25.2ButterKnife原理
 http://www.jianshu.com/p/89f19d67b348
+
 25.3 图片加载库的对比（Glide UML Picasso Fresco）
 http://www.jianshu.com/p/78c0a088fc2e
+
 25.4 Glide是怎么实现图片加载的
 http://www.jianshu.com/p/78c0a088fc2e
 
