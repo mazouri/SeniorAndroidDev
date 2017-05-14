@@ -76,7 +76,21 @@ public class LoginPresenter {
 
 ## 问题4：怎么使用Dagger？
 
+解题思路：Dagger2是通过注解来实现依赖注入的，要使用Dagger，需要先理解它的主要注解：
 
+- 1.@Inject 作用 1.标记构造函数，提供依赖  2.在宿主中生成依赖
+
+- 2.@Module 标记一个类，专门用来提供依赖
+
+- 3.@Component 标记一个接口，是依赖和宿主之间的桥梁，将相关依赖注入到宿主中
+
+- 4.@Provides 标记Module中的方法，该方法在需要提供依赖时被调用，在方法里创建依赖实例。
+
+- 5.@Scope 给依赖划定作用域，实现局部单例
+
+- 6.@Singleton 让依赖成为全局单例模式
+
+- 7.@Qulifier 限定符 自定义Qulifier注解 对于返回相同类型的两个provide方法，提供具体的事例。
 
 
 
