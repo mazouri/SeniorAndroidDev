@@ -205,12 +205,16 @@ http://www.jianshu.com/p/72d2e3491346
 
 ## 13.View事件分发
 13.1 Android中touch事件的传递机制是怎样的?
+
 参考：http://www.jianshu.com/p/72d2e3491346
+
 13.2 事件分发中的 onTouch 和 onTouchEvent 有什么区别，又该如何使用？
+
 参考：http://www.jianshu.com/p/72d2e3491346
 
 ## 14.SQLite
 14.1 SQLite支持事务吗? 添加删除如何提高性能?
+
 参考：http://www.jianshu.com/p/72d2e3491346
 
 ## 15.AIDL
@@ -218,181 +222,289 @@ http://www.jianshu.com/p/72d2e3491346
 
 ## 16.android5，6，7，8
 16.1 各版本新特性
+
 http://www.jianshu.com/p/89f19d67b348
 
 ## 17.IPC机制（艺术2）
 17.1 Serializable 和 Parcelable 的区别？
+
 17.2 android中进程的优先级？
+
 17.3 Binder机制
+
 http://www.jianshu.com/p/89f19d67b348
+
 ## 18.热更新hotfix
 18.1 热布丁
+
 http://www.jianshu.com/p/89f19d67b348
+
 ## 19.JSON XML问题
+
 19.1 Json的介绍
+
 http://www.jianshu.com/p/89f19d67b348
+
 19.2 android中有哪几种解析xml的类,官方推荐哪种？以及它们的原理和区别
+
 http://www.jianshu.com/p/89f19d67b348
+
 ## 20.列表视图ListView和RecyclerView问题
+
 20.1 讲讲ListView容易引起性能问题的地方，再说一下你有什么优化方案
+
 20.2 Adapter是什么？你所接触过的adapter有那些？
+
 20.3 ListView 如何定位到指定位置
+
 20.4 如何在 ScrollView 中如何嵌入 ListView
+
 20.5 ListView 中图片错位的问题是如何产生的
+
 参考：http://www.jianshu.com/p/72d2e3491346
+
 ## 21.OOM问题
+
 21.1内存泄露哪几种情况？如何处理？有使用过什么相关的检测工具吗？
+
 http://www.jianshu.com/p/89f19d67b348
+
 21.2 在Android中，怎么节省内存的使用，怎么主动回收内存？
+
 参考：http://www.jianshu.com/p/5a8e09bcb769
+
 ## 22.ANR
+
 22.1 ANR排错
+
 http://www.jianshu.com/p/89f19d67b348
+
 ## 23.Socket
+
 http://www.jianshu.com/p/39a2639604ae
+
 http://www.jianshu.com/p/1ef22ce15773
+
 [Android Socket通信--UdpClient](http://www.jianshu.com/p/b44885147355)
+
 [Android Socket通信--TcpClient](http://www.jianshu.com/p/338a61ee5b42)
+
 [android socket开发中可能遇到的坑](http://www.jianshu.com/p/45957e180925)
+
 [Android Socket UDP大文件传输](http://www.jianshu.com/p/9ad56c0fd468)
 
 http://www.jianshu.com/p/089fb79e308b
+
 [概念 TCP/IP Socket Http Restful](http://www.jianshu.com/p/d198b3080432)
+
 ## 24.TCP／UDP／HTTP
 ## 25.第三方库
+
 25.1常用哪些开源项目，说说最熟悉的一个？
 
 [Dagger相关的问题](https://github.com/mazouri/SeniorAndroidDev/blob/master/android/thirdlibrary/dagger/Dagger%E9%97%AE%E9%A2%98.md)
 
-25.2ButterKnife原理
+25.2 ButterKnife原理
+
 http://www.jianshu.com/p/89f19d67b348
 
 25.3 图片加载库的对比（Glide UML Picasso Fresco）
+
 http://www.jianshu.com/p/78c0a088fc2e
 
 25.4 Glide是怎么实现图片加载的
+
 http://www.jianshu.com/p/78c0a088fc2e
 
 ## 26.适配问题
-26.1有遇到过哪些屏幕和资源适配问题？
+
+26.1 有遇到过哪些屏幕和资源适配问题？
 
 ## 27.图片问题（Drawable）
-27.1图片的处理和优化, 图片圆角处理的方式有哪几种？
-27.2Bitmap的加载和Cache
-27.3DiskLruCache
+27.1 图片的处理和优化, 图片圆角处理的方式有哪几种？
+
+27.2 Bitmap的加载和Cache
+
+27.3 DiskLruCache
+
 27.4 谈谈你对 Bitmap 的理解, 什么时候应该手动调用 bitmap.recycle()
+
 http://www.jianshu.com/p/72d2e3491346
+
 27.5 如何加载大图，如几百M甚至1G的大图如何加载？
+
 http://www.jianshu.com/p/78c0a088fc2e
 
 ## 28.专业领域
 ###28.1LBS应用:使用百度或高德地图的SDK遇到过的问题（国内外限制、精确度等）？
+
 28.1.1定位项目中，如何选取定位方案，如何平衡耗电与实时位置的精度？
+
 http://www.jianshu.com/p/72d2e3491346
 
 ###28.2插件和热修复的原理:插件和热修复框架的原理，模块化开发方式，64K的方法数限问题.
+
 ###28.3消息推送:国内各个消息推送的使用问题？如何保持Service长活？Http长链接实现等
+
 方案1、使用极光和友盟推送。
+
 方案2、使用XMPP协议（Openfire + Spark + Smack）
+
 方案3、使用MQTT协议（更多信息见：http://mqtt.org/）
+
 ###28.4视频直播
+
 ###28.5音乐
+
 28.5.1 如何加载的音乐信息，如何改善其效率
+
 参考：http://www.jianshu.com/p/5a8e09bcb769
 
 ## 29.项目经验和职业规划
+
 29.1说说你的亮点，最值得分享的
+
 [Android面试一天一题（吹牛题）](http://www.jianshu.com/p/a354af5cd6d1)
+
 29.2项目中遇到哪些难题，最终你是如何解决的？
+
 [Android面试一天一题（Day 31：Android技术难题解决方案）](http://www.jianshu.com/p/69d9444e2a9a)
+
 29.3你对未来三到五年的职业规划
+
 [职业生涯](http://www.jianshu.com/nb/7675514)
+
 29.4 谈谈你在工作中是怎样解决一个 bug
+
 http://www.jianshu.com/p/72d2e3491346
 
 
 
 #更多的
+
 ## 30.RemoteViews
 
 ## 31.动画
 31.1 activity切换动画
+
 [activity切换动画](https://github.com/helen-x/AndroidInterview/blob/master/android/activity%E5%88%87%E6%8D%A2%E5%8A%A8%E7%94%BB.md)
+
 31.2 Android 中的动画有哪几类，它们的特点和区别是什么
+
 http://www.jianshu.com/p/72d2e3491346
+
 31.3 属性动画，例如一个 button 从 A 移动到 B 点，B 点还是可以响应点击事件，这个原理是什么？
+
 http://www.jianshu.com/p/72d2e3491346
+
 31.4 属性动画的步骤
+
 http://www.jianshu.com/p/89f19d67b348
 
 ## 32.Window和WindowManager
 
 ## 33.线程与线程池
+
 33.1 对android主线程的运用和理解
+
 参考：http://www.jianshu.com/p/5a8e09bcb769
+
 33.2 线程间同步有哪几种
+
 http://www.jianshu.com/p/78c0a088fc2e
 
 ## 34.JNI和NDK
 
 ## 35.性能优化
+
 35.1 怎样对 android 进行优化？
+
 http://www.jianshu.com/p/72d2e3491346
+
 http://www.jianshu.com/p/89f19d67b348
 
 ## 36.与服务器交互
+
 36.1 Android与服务器交互的方式中的对称加密和非对称加密是什么?
+
 http://www.jianshu.com/p/72d2e3491346
+
 36.2 怎么考虑数据传输的安全性
+
 http://www.jianshu.com/p/89f19d67b348
 
 ## 37.分包
+
 37.1 MultiDex是怎么实现分包的，它的实现原理，多个dex是怎么加载的
+
 http://www.jianshu.com/p/78c0a088fc2e
 
 ## 38.Apk瘦身
+
 http://www.jianshu.com/p/78c0a088fc2e
 
 ## 其他问题
+
 1.对android虚拟机的理解，包括内存管理机制垃圾回收机制
+
 参考：http://www.jianshu.com/p/5a8e09bcb769
 
 2.Framework工作方式及原理，Activity是如何生成一个view的，机制是什么
+
 参考：http://www.jianshu.com/p/5a8e09bcb769
 
 3.android本身的一些限制，比如apk包大小限制，读取大文件时的时间限制
+
 参考：http://www.jianshu.com/p/5a8e09bcb769
+
 4.启动应用后，改变系统语言，应用的语言会改变么？
+
 参考：http://www.jianshu.com/p/5a8e09bcb769
+
 5.Android程序与Java程序的区别？
+
 参考：http://www.jianshu.com/p/5a8e09bcb769
+
 6.不同工程中的方法是否可以相互调用？
+
 > 可以,列举aidl访问远程服务的例子.
 
 7.Android root机制
 
 8.如何对 Android 应用进行性能分析
+
 参考：http://www.jianshu.com/p/72d2e3491346
 
 9.Android 中如何捕获未捕获的异常
+
 参考：http://www.jianshu.com/p/72d2e3491346
 
 10.请解释下 Android 程序运行时权限与文件系统权限的区别？
+
 参考：http://www.jianshu.com/p/72d2e3491346
 
 11.JVM
+
 11.1JVM 和Dalvik虚拟机的区别?
+
 http://www.jianshu.com/p/89f19d67b348
 
 12.Android中Java和JavaScript交互
+
 http://www.jianshu.com/p/89f19d67b348
 
 ## 实现问题
+
 1.Android 应用中验证码登陆都有哪些实现方案
+
 http://www.jianshu.com/p/72d2e3491346
+
 2.andorid 应用第二次登录实现自动登录
+
 http://www.jianshu.com/p/72d2e3491346
+
 3.怎么实现断点续传下载文件
+
 http://blog.csdn.net/wwj_748/article/details/20146869
 
 
@@ -405,14 +517,21 @@ http://blog.csdn.net/wwj_748/article/details/20146869
 
 
 
-更多问题：
+## 更多问题：
 1.ToolBar使用
+
 2.熟悉format里面的%1$s、%1$d吗？
+
 3.项目(app)结构资源文件(res)内mipmap是用来存放什么文件的？
+
 4.多进程架构该如何写？
+
 5.数据该如何保密？有几种解决方案？有什么优缺点？
+
 6.android的内存回收机制
+
 7.系统自带的音视频有什么问题？
+
 8.线程安全
 
 
