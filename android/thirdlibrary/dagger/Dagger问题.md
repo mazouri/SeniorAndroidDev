@@ -94,6 +94,8 @@ Android在初始化对象的时候经常需要处理各种依赖关系，比如�
 
 - 7.@Qulifier 限定符 自定义Qulifier注解 对于返回相同类型的两个provide方法，提供具体的事例。
 
+> @Singleton是@Scope的一个默认实现； @Name是@Qulifier的一个默认实现，在ApiModule中提供OkHttpClient时用到过。
+
 
 
 ## 参考博客：
