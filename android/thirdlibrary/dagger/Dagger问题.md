@@ -66,6 +66,8 @@ public class LoginPresenter {
 
 由于Dagger没有用反射来注入，对于程序的性能影响非常小，因此更加适用于Android应用的开发。
 
+Android在初始化对象的时候经常需要处理各种依赖关系，比如网络访问中使用Retrofit、本地存储使用SharedPreference等，我们都需要在使用它的地方进行实例对象的创建。
+
 另外在搭建模块框架的时候，很注重模块之间的解耦，因此，我们会使用MVP、MVVM、MVVPVM等实现模块解耦，
 
 而Dagger和MVP的结合可以使得M-V-P之间也能实现进一步的解耦。也就是我们对M-V-P三层修改任意一个，对其它
@@ -88,13 +90,19 @@ public class LoginPresenter {
 
 - 5.@Scope 给依赖划定作用域，实现局部单例
 
-- 6.@Singleton 让依赖成为全局单例模式
+- 6.@Singleton 让依赖成为全局单例模式。一般配合@Provides一起出现
 
 - 7.@Qulifier 限定符 自定义Qulifier注解 对于返回相同类型的两个provide方法，提供具体的事例。
 
 
 
+## 参考博客：
 
+[Android：dagger2让你爱不释手-基础依赖注入框架篇](http://www.jianshu.com/p/cd2c1c9f68d4)
+
+[Android：dagger2让你爱不释手-重点概念讲解、融合篇](http://www.jianshu.com/p/1d42d2e6f4a5)
+
+[Android：dagger2让你爱不释手-终结篇](http://www.jianshu.com/p/65737ac39c44)
 
 
 
