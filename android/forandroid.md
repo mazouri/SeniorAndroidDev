@@ -316,6 +316,10 @@ http://www.jianshu.com/p/78c0a088fc2e
 
 http://www.jianshu.com/p/78c0a088fc2e
 
+25.5 第三方SDK开发
+
+[第三方SDK开发](https://github.com/mazouri/SeniorAndroidDev/blob/master/android/thirdlibrary/%E7%AC%AC%E4%B8%89%E6%96%B9sdk%E5%BC%80%E5%8F%91.md)
+
 ## 26.适配问题
 
 26.1 有遇到过哪些屏幕和资源适配问题？
