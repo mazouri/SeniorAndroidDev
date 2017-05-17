@@ -71,6 +71,8 @@ http://www.jianshu.com/p/72d2e3491346
 
 ## 3.Service问题，IntentService
 
+https://github.com/mazouri/SeniorAndroidDev/tree/master/android/service
+
 3.1 Service的工作过程
 
 3.2 Service有哪些启动方法，有什么区别，怎样停用Service？
