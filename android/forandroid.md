@@ -14,6 +14,18 @@ JNI和NDK、性能优化、Apk瘦身、java虚拟机
 
 1.2 说说MVP，MVC，MVVM架构的不同
 
+解题思路：
+
+[Android MVP 详解（上）](http://www.jianshu.com/p/9a6845b26856)
+
+[Android MVP 详解（下）](http://www.jianshu.com/p/0590f530c617)
+
+[android MVC && MVP && MVVM分析和对比](http://www.cnblogs.com/wytiger/p/5996876.html)
+
+[Android App的设计架构：MVC,MVP,MVVM与架构经验谈](http://www.cnblogs.com/wytiger/p/5305087.html)
+
+[如何构建Android MVVM应用框架](http://www.open-open.com/lib/view/open1487924345584.html)
+
 ## 2.Activity问题
 
 2.1 说说Activity生命周期？
@@ -306,6 +318,10 @@ http://www.jianshu.com/p/089fb79e308b
 
 [Dagger相关的问题](https://github.com/mazouri/SeniorAndroidDev/blob/master/android/thirdlibrary/dagger/Dagger%E9%97%AE%E9%A2%98.md)
 
+[rxjava](https://github.com/mazouri/SeniorAndroidDev/tree/master/android/thirdlibrary/rx)
+
+[dagger](https://github.com/mazouri/SeniorAndroidDev/tree/master/android/thirdlibrary/dagger)
+
 25.2 ButterKnife原理
 
 http://www.jianshu.com/p/89f19d67b348
@@ -540,5 +556,18 @@ http://blog.csdn.net/wwj_748/article/details/20146869
 
 8.线程安全
 
+## Java问题
 
+### 注解
+java注解：Java注解（Annotation）原理详解：http://blog.csdn.net/lylwo317/article/details/52163304
+
+Java中的注解是如何工作的？：http://www.importnew.com/10294.html
+
+Java学习之注解Annotation实现原理：http://www.cnblogs.com/whoislcj/p/5671622.html
+
+### 反射
+java反射：Java反射机制详解：http://www.cnblogs.com/lzq198754/p/5780331.html
+
+### 动态代理
+动态代理：十分钟理解Java中的动态代理：http://www.jb51.net/article/86531.htm
 
