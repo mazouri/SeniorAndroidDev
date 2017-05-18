@@ -19,3 +19,12 @@
 4.外观模式：要求一个子系统的外部与其内部的通信必须通过一个统一的对象进行。
 
 详见：[外观模式](https://github.com/mazouri/EasyDesignPatterns/blob/master/Structural-patterns/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F.md)
+
+
+> 说说MVP，MVC，MVVM架构的不同
+
+解题思路：
+
+[MVP](https://github.com/mazouri/SeniorAndroidDev/blob/master/android/dp_in_android/MVP%E8%AF%A6%E8%A7%A3.md)
+
+[MVVM]()
