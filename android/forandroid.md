@@ -30,13 +30,23 @@ JNI和NDK、性能优化、Apk瘦身、java虚拟机
 
 2.1 说说Activity生命周期？
 
+（开发艺术）
+
 2.2 Activity的启动模式及使用场景
+
+（开发艺术）
 
 2.3 两个Activity之间怎么传递数据（Serializable和Parcelable）?
 
+（开发艺术）
+
 2.4 IntentFilter的匹配规则
 
+（开发艺术）
+
 2.5 Activity的工作过程
+
+（开发艺术）
 
 2.6 加速启动activity
 
@@ -57,9 +67,13 @@ JNI和NDK、性能优化、Apk瘦身、java虚拟机
 
 [onNewIntent的作用和调用时机？](http://www.jianshu.com/p/e279b3137157)
 
-2.10 Activity典型情况下的生命周期分析(艺术1)
+2.10 Activity典型情况下的生命周期分析
+
+（开发艺术）
 
 2.11 Activity异常情况下的生命周期分析
+
+（开发艺术）
 
 2.12 如何退出Activity？如何安全退出已调用多个Activity的Application？
 
@@ -87,29 +101,37 @@ https://github.com/mazouri/SeniorAndroidDev/tree/master/android/service
 
 3.1 Service的工作过程
 
-3.2 Service有哪些启动方法，有什么区别，怎样停用Service？
+（开发艺术）
 
-3.3 Service与Activity怎么实现通信
+3.2 Service有哪些启动方法，有什么区别，怎样停用Service？yes
+
+3.3 Service与Activity怎么实现通信？yes
 
 3.4 Service里面可以弹出 dialog 或 Toast 吗？
 
 参考：http://www.jianshu.com/p/8aa12128a116
 
-3.5 什么时候使用Service?
+3.5 什么时候使用Service?yes
 
-3.6 怎么在启动一个activity时就启动一个service？
+3.6 怎么在启动一个activity时就启动一个service？yes
 
-3.7 Service 与 Thread 的区别？
+3.7 Service 与 Thread 的区别？yes
 
-3.8 如何保证 Service 在后台不被 kill？
+3.8 如何保证 Service 在后台不被 kill？yes
 
 http://www.jianshu.com/p/89f19d67b348
 
-3.9 什么是IntentService？有何优点？
+3.9 什么是IntentService？有何优点？yes
 
-3.10 IntentService 与 Service的异同
+3.10 IntentService 与 Service的异同？yes
 
 ## 4.Fragment问题
+
+[Android -- Fragment 基本用法、生命周期与细节注意](http://www.jianshu.com/p/1ff18ec1fb6b)
+
+[深入一点 让细节帮你和Fragment更熟络](http://www.jianshu.com/p/acb7705df1a6)
+
+[Android--Fragment你应该明白的一些疑难点](http://www.jianshu.com/p/94bede7d6f46)
 
 4.1 fragment的生命周期
 
@@ -142,9 +164,13 @@ http://www.jianshu.com/p/89f19d67b348
 
 5.1 ContentProvider的工作过程
 
+（开发艺术）
+
 ## 6.BroadcastReceiver
 
 6.1 BroadcastReceiver的工作过程
+
+（开发艺术）
 
 6.2 一个 app 被杀掉进程后，是否还能收到广播
 
@@ -184,6 +210,8 @@ http://www.jianshu.com/p/89f19d67b348
 
 9.1 自定义view的基本流程
 
+（开发艺术）
+
 9.2 SurfaceView和View的最本质的区别
 
 http://www.jianshu.com/p/89f19d67b348
@@ -196,13 +224,19 @@ http://www.jianshu.com/p/72d2e3491346
 
 10.2 什么是三级缓存？原理是什么？
 
+（开发艺术）
+
 ## 11.数据存储
 
 ## 12.消息处理机制
 
 12.1 Handler的工作原理
 
+（开发艺术）
+
 12.2 ThreadLocal的工作原理
+
+（开发艺术）
 
 12.3 使用 Handler 时怎么避免引起内存泄漏？
 
@@ -234,6 +268,8 @@ http://www.jianshu.com/p/72d2e3491346
 ## 15.AIDL
 15.1 AIDL的全称是什么？如何工作？能处理哪些类型的数据？
 
+（开发艺术）
+
 ## 16.android5，6，7，8
 16.1 各版本新特性
 
@@ -243,6 +279,8 @@ http://www.jianshu.com/p/89f19d67b348
 17.1 Serializable 和 Parcelable 的区别？
 
 17.2 android中进程的优先级？
+
+（开发艺术）
 
 17.3 Binder机制
 
@@ -267,11 +305,25 @@ http://www.jianshu.com/p/89f19d67b348
 
 20.1 讲讲ListView容易引起性能问题的地方，再说一下你有什么优化方案
 
+[RecyclerView的卡顿优化（一）](http://blog.csdn.net/likuan0214/article/details/51899400)
+
+[RecyclerView 卡顿优化（二）](http://blog.csdn.net/likuan0214/article/details/51911873)
+
+[RecyclerView.Adapter优化了吗？](https://segmentfault.com/a/1190000005717450)
+
+[ RecyclerView全攻略进阶优化](http://blog.csdn.net/u013278099/article/details/49717023)
+
 20.2 Adapter是什么？你所接触过的adapter有那些？
+
+[Android Adapter原理解析](http://blog.csdn.net/luoyingxing/article/details/52701997)
+
+[偷懒新姿势，打造属于RecyclerView的万能适配器Adapter和ViewHolder](http://blog.csdn.net/tellh/article/details/50670458)
 
 20.3 ListView 如何定位到指定位置
 
 20.4 如何在 ScrollView 中如何嵌入 ListView
+
+（开发艺术 滑动冲突）
 
 20.5 ListView 中图片错位的问题是如何产生的
 
@@ -312,6 +364,9 @@ http://www.jianshu.com/p/089fb79e308b
 [概念 TCP/IP Socket Http Restful](http://www.jianshu.com/p/d198b3080432)
 
 ## 24.TCP／UDP／HTTP
+
+（HTTP书）
+
 ## 25.第三方库
 
 25.1常用哪些开源项目，说说最熟悉的一个？
@@ -347,7 +402,11 @@ http://www.jianshu.com/p/78c0a088fc2e
 
 27.2 Bitmap的加载和Cache
 
+（开发艺术）
+
 27.3 DiskLruCache
+
+（开发艺术）
 
 27.4 谈谈你对 Bitmap 的理解, 什么时候应该手动调用 bitmap.recycle()
 
@@ -528,12 +587,6 @@ http://www.jianshu.com/p/72d2e3491346
 3.怎么实现断点续传下载文件
 
 http://blog.csdn.net/wwj_748/article/details/20146869
-
-
-
-
-
-
 
 
 
