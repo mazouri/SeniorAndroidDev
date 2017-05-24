@@ -89,3 +89,45 @@ aMap.addPolygon(new PolygonOptions()
 .addAll(createRectangle(Constants.SHANGHAI, 1, 1))
 .fillColor(Color.LTGRAY).strokeColor(Color.RED).strokeWidth(1));
 ```
+# 13.绘制热力图
+- 热力图功能提供将自有数据展示在地图上，可以给使用者直观描述一个区域的人员，车辆等事物的热度情况
+- HeatmapTileProvider 是生成热力图的核心类;通过 TileOverlay 绘制热力图
+```
+// 初始化 TileOverlayOptions
+TileOverlayOptions tileOverlayOptions = new TileOverlayOptions();
+tileOverlayOptions.tileProvider(heatmapTileProvider); // 设置瓦片图层的提供者 
+// 向地图上添加 TileOverlayOptions 类对象
+mAMap.addTileOverlay(tileOverlayOptions);
+
+```
+# 14.绘制3D模型
+- 使用OpenGL绘制
+
+# 15.轨迹纠偏
+- 轨迹纠偏可帮助您将您记录的行车轨迹点进行抽稀、纠偏操作，将轨迹匹配到道路上，提供平滑的绘制效果，并计算行驶里程
+- LBSTraceClient
+- 需要按照 TraceLocation 定义好的格式构造轨迹点 List:必须有经纬度信息
+- 轨迹纠偏支持传入多种坐标系（高德、GPS原始坐标以及百度）的轨迹点数据，并且可支持多条数据同时纠偏。
+```
+mTraceClient.queryProcessedTrace(mSequenceLineID, mTraceList,
+                mCoordinateType, this);
+```
+- 获取纠偏后的数据:实现 TraceListener 监听器获取到`List<LatLng> linepoints`及轨迹的总距离
+
+# 16.点平滑移动
+- 根据输入的关键点和时间参数，实现点的平滑移动效果
+- 使用场景：可应用到展示车辆行驶轨迹、用户移动轨迹等场景
+- startSmoothMove()
+
+# 17.绘制海量点图层
+- 设置海量点属性:MultiPointOverlayOptions
+- 添加海量点获取管理对象:aMap.addMultiPointOverlay(overlayOptions); 
+- 读取数据并通过海量点管理对象设置:multiPointOverlay.setItems(list);
+- 海量点点击事件aMap.setOnMultiPointClickListener(multiPointClickListener);
+
+
+
+
+
+
+
