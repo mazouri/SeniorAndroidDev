@@ -125,9 +125,98 @@ mTraceClient.queryProcessedTrace(mSequenceLineID, mTraceList,
 - 读取数据并通过海量点管理对象设置:multiPointOverlay.setItems(list);
 - 海量点点击事件aMap.setOnMultiPointClickListener(multiPointClickListener);
 
+# 18.获取POI数据
+- POI:兴趣点.在地图表达中，一个 POI 可代表一栋大厦、一家商铺、一处景点等等。通过POI搜索，完成找餐馆、找景点、找厕所等等的功能
+## 关键字检索POI:
+- 继承 OnPoiSearchListener 监听;
+- 构造 PoiSearch.Query 对象，通过 PoiSearch.Query(String query, String ctgr, String city) 设置搜索条件
+- 构造 PoiSearch 对象，并设置监听`poiSearch.setOnPoiSearchListener(this)`
+- 调用 PoiSearch 的 searchPOIAsyn() 方法发送请求:poiSearch.searchPOIAsyn();
+- 通过回调接口 onPoiSearched 解析返回的结果:result.getPois()可以获取到PoiItem列表
+## 周边检索POI
+- 与关键字检索的唯一区别需要通过 PoiSearch 的 setBound 方法设置圆形查询范围
+```
+poiSearch.setBound(new SearchBound(new LatLonPoint(locationMarker.getPosition().latitude,
+            locationMarker.getPosition().longitude), 1000));//设置周边搜索的中心点以及半径
+```
+## 多边形内检索的POI
+```
+List<LatLonPoint> points = new ArrayList<LatLonPoint>();
+points.add(new LatLonPoint(39.941711, 116.382248));
+points.add(new LatLonPoint(39.884882, 116.359566));
+points.add(new LatLonPoint(39.878120, 116.437630));
+points.add(new LatLonPoint(39.941711, 116.382248));
 
+poiSearch.setBound(new SearchBound(points));//设置多边形区域
+```
+### 输入内容自动提示
+- 输入提示是指根据用户输入的关键词，给出相应的提示信息，将最有可能的搜索词呈现给用户，以减少用户输入信息，提升用户体验
+- 继承 InputtipsListener 监听。
+- 构造 InputtipsQuery 对象,通过 InputtipsQuery(java.lang.String keyword, java.lang.String city) 设置搜索条件
+- 构造 Inputtips 对象，并设置监听
+```
+Inputtips inputTips = new Inputtips(InputtipsActivity.this, inputquery);
+inputTips.setInputtipsListener(this);
+```
+- 调用 PoiSearch 的 requestInputtipsAsyn() 方法发送请求
 
+### 道路沿途检索POI
+- 从搜索 SDK 3.5.0 版本开始支持，可查询路径沿途的加油站、ATM、汽修店、厕所
+- RoutePOISearchQuery
+- RoutePOISearch.searchRoutePOIAsyn();
 
+# 19.获取地址描述数据
+## 地理编码（地址转坐标）
+- 继承 OnGeocodeSearchListener 监听
+- 构造 GeocodeSearch 对象，并设置监听
+- GeocodeQuery设置查询参数
+- 调用 GeocodeSearch 的 getFromLocationNameAsyn(GeocodeQuery geocodeQuery) 方法发起请求
+- 通过回调接口 onGeocodeSearched 解析返回的结果
+## 逆地理编码（坐标转地址）
+- 继承 OnGeocodeSearchListener 监听
+- 构造 GeocodeSearch 对象，并设置监听
+- 通过 RegeocodeQuery设置查询参数
+- 调用 GeocodeSearch 的 getFromLocationAsyn(RegeocodeQuery regeocodeQuery) 方法发起请求
+- 通过回调接口 onRegeocodeSearched 解析返回的结果
 
+# 20.获取公交数据
+## 公交站点查询
+- BusStationQuery
+- busStationSearch.searchBusStationAsyn
+## 公交路线查询
+- 设置查询条件BusLineSearch
+- BusLineSearch.searchBusLineAsyn()发送请求和接收数据
 
+# 21.驾车出行路线规划
+- RouteSearch
+- DriveRouteQuery设置搜索参数
+- RouteSearch 的 calculateDriveRouteAsyn
 
+# 22.步行出行路线规划
+- WalkRouteQuery
+- RouteSearch 的 calculateWalkRouteAsyn
+
+# 23.公交出行路线规划
+- RouteSearch
+- BusRouteQuery
+- RouteSearch 的 calculateBusRouteAsyn
+# 24.骑行出行路线规划
+- RouteSearch
+- RideRouteQuery
+- RouteSearch 的 calculateRideRouteAsyn
+
+# 24.坐标转换
+- 支持GPS/Mapbar/Baidu等多种类型坐标在高德地图上使用;参见类CoordinateConverter
+- 经纬度坐标与屏幕像素坐标互转
+- fromScreenLocation:根据转入的屏幕位置返回一个地图位置（经纬度）
+- toScreenLocation:返回一个从地图位置转换来的屏幕位置
+
+# 25.距离/面积计算
+## 两点间的直线距离计算
+```
+AMapUtils.calculateLineDistance(latLng1,latLng2);
+```
+## 面积计算
+```
+AMapUtils.calculateArea(leftTopLatlng,rightBottomLatlng)
+```
