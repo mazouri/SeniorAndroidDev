@@ -6,7 +6,7 @@ JSON XML、ListView和RecyclerView、OOM、ANR、TCP／UDP／HTTP／Socket、第
 LBS应用（百度、高德）、消息推送、热更新hotfix、RemoteViews、动画、Window和WindowManager、线程与线程池、
 JNI和NDK、性能优化、Apk瘦身、java虚拟机
 
-## 1.设计模式问题
+## （yes）1.设计模式问题
 
 1.1 你常用的设计模式有哪些？如何来重构，优化你的代码？
 
@@ -95,7 +95,7 @@ http://www.jianshu.com/p/72d2e3491346
 参考：http://www.jianshu.com/p/5a8e09bcb769
 
 
-## 3.Service问题，IntentService
+## （yes）3.Service问题，IntentService
 
 https://github.com/mazouri/SeniorAndroidDev/tree/master/android/service
 
@@ -125,7 +125,7 @@ http://www.jianshu.com/p/89f19d67b348
 
 3.10 IntentService 与 Service的异同？yes
 
-## 4.Fragment问题
+## （yes）4.Fragment问题
 
 [Android -- Fragment 基本用法、生命周期与细节注意](http://www.jianshu.com/p/1ff18ec1fb6b)
 
@@ -160,13 +160,13 @@ http://www.jianshu.com/p/89f19d67b348
 4.8 如何切换 fragement,不重新实例化
 参考：http://www.jianshu.com/p/72d2e3491346
 
-## 5.ContentProvider问题
+## （yes）5.ContentProvider问题
 
 5.1 ContentProvider的工作过程
 
 （开发艺术）
 
-## 6.BroadcastReceiver
+## （yes）6.BroadcastReceiver
 
 6.1 BroadcastReceiver的工作过程
 
@@ -174,9 +174,11 @@ http://www.jianshu.com/p/89f19d67b348
 
 6.2 一个 app 被杀掉进程后，是否还能收到广播
 
+[ 广播和Service唤醒被杀死的android app](http://blog.csdn.net/lhd201006/article/details/51136854)
+
 6.3 Android引入广播机制的用意？
 
-## 7.异步任务AsyncTask问题
+## 7.(yes)异步任务AsyncTask问题
 
 7.1网络请求是怎么做的异步呢？什么情况下用Handler，什么情况下用AsyncTask
 
@@ -196,7 +198,7 @@ http://www.jianshu.com/p/72d2e3491346
 
 http://www.jianshu.com/p/89f19d67b348
 
-## 8.Android启动过程
+## (yes)8.Android启动过程
 
 8.1启动一个程序，可以主界面点击图标进入，也可以从一个程序中跳转过去，二者有什么区别？
 
@@ -206,7 +208,7 @@ http://www.jianshu.com/p/89f19d67b348
 
 http://www.jianshu.com/p/89f19d67b348
 
-## 9.自定义View问题
+## (yes)9.自定义View问题
 
 9.1 自定义view的基本流程
 
@@ -216,7 +218,7 @@ http://www.jianshu.com/p/89f19d67b348
 
 http://www.jianshu.com/p/89f19d67b348
 
-## 10.缓存机制问题
+## (yes)10.缓存机制问题
 
 10.1 说说 LruCache 底层原理
 
@@ -226,9 +228,9 @@ http://www.jianshu.com/p/72d2e3491346
 
 （开发艺术）
 
-## 11.数据存储
+## (yes)11.数据存储
 
-## 12.消息处理机制
+## (yes)12.消息处理机制
 
 12.1 Handler的工作原理
 
@@ -251,7 +253,7 @@ http://www.jianshu.com/p/72d2e3491346
 参考：http://www.jianshu.com/p/72d2e3491346
 
 
-## 13.View事件分发
+## (yes)13.View事件分发
 13.1 Android中touch事件的传递机制是怎样的?
 
 参考：http://www.jianshu.com/p/72d2e3491346
@@ -260,22 +262,22 @@ http://www.jianshu.com/p/72d2e3491346
 
 参考：http://www.jianshu.com/p/72d2e3491346
 
-## 14.SQLite
+## (yes)14.SQLite
 14.1 SQLite支持事务吗? 添加删除如何提高性能?
 
 参考：http://www.jianshu.com/p/72d2e3491346
 
-## 15.AIDL
+## (yes)15.AIDL
 15.1 AIDL的全称是什么？如何工作？能处理哪些类型的数据？
 
 （开发艺术）
 
-## 16.android5，6，7，8
+## (yes)16.android5，6，7，8
 16.1 各版本新特性
 
 http://www.jianshu.com/p/89f19d67b348
 
-## 17.IPC机制（艺术2）
+## (yes)17.IPC机制（艺术2）
 17.1 Serializable 和 Parcelable 的区别？
 
 17.2 android中进程的优先级？
@@ -286,12 +288,12 @@ http://www.jianshu.com/p/89f19d67b348
 
 http://www.jianshu.com/p/89f19d67b348
 
-## 18.热更新hotfix
+## (yes)18.热更新hotfix
 18.1 热布丁
 
 http://www.jianshu.com/p/89f19d67b348
 
-## 19.JSON XML问题
+## (yes)19.JSON XML问题
 
 19.1 Json的介绍
 
@@ -301,7 +303,7 @@ http://www.jianshu.com/p/89f19d67b348
 
 http://www.jianshu.com/p/89f19d67b348
 
-## 20.列表视图ListView和RecyclerView问题
+## (yes)20.列表视图ListView和RecyclerView问题
 
 20.1 讲讲ListView容易引起性能问题的地方，再说一下你有什么优化方案
 
@@ -321,6 +323,10 @@ http://www.jianshu.com/p/89f19d67b348
 
 20.3 ListView 如何定位到指定位置
 
+[Android入门 在ListView中如何进行精确的定位](http://www.cnblogs.com/xgjblog/p/4228782.html)
+
+[Listview如何定位到指定位置](http://blog.csdn.net/u013182960/article/details/52831640)
+
 20.4 如何在 ScrollView 中如何嵌入 ListView
 
 （开发艺术 滑动冲突）
@@ -329,7 +335,7 @@ http://www.jianshu.com/p/89f19d67b348
 
 参考：http://www.jianshu.com/p/72d2e3491346
 
-## 21.OOM问题
+## (yes)21.OOM问题
 
 21.1内存泄露哪几种情况？如何处理？有使用过什么相关的检测工具吗？
 
@@ -339,13 +345,13 @@ http://www.jianshu.com/p/89f19d67b348
 
 参考：http://www.jianshu.com/p/5a8e09bcb769
 
-## 22.ANR
+## (yes)22.ANR
 
 22.1 ANR排错
 
 http://www.jianshu.com/p/89f19d67b348
 
-## 23.Socket
+## (yes)23.Socket
 
 http://www.jianshu.com/p/39a2639604ae
 
@@ -363,11 +369,11 @@ http://www.jianshu.com/p/089fb79e308b
 
 [概念 TCP/IP Socket Http Restful](http://www.jianshu.com/p/d198b3080432)
 
-## 24.TCP／UDP／HTTP
+## (yes)24.TCP／UDP／HTTP
 
 （HTTP书）
 
-## 25.第三方库
+## (yes)25.第三方库
 
 25.1常用哪些开源项目，说说最熟悉的一个？
 
@@ -393,12 +399,18 @@ http://www.jianshu.com/p/78c0a088fc2e
 
 [第三方SDK开发](https://github.com/mazouri/SeniorAndroidDev/blob/master/android/thirdlibrary/%E7%AC%AC%E4%B8%89%E6%96%B9sdk%E5%BC%80%E5%8F%91.md)
 
-## 26.适配问题
+## (yes)26.适配问题
 
 26.1 有遇到过哪些屏幕和资源适配问题？
 
-## 27.图片问题（Drawable）
+[最清晰的Android多屏幕适配方案](http://www.it165.net/pro/html/201509/54281.html)
+
+## (yes)27.图片问题（Drawable）
 27.1 图片的处理和优化, 图片圆角处理的方式有哪几种？
+
+[Android 完美实现图片圆角和圆形（对实现进行分析）](http://blog.csdn.net/lmj623565791/article/details/24555655)
+[Android Xfermode 实战 实现圆形、圆角图片](http://blog.csdn.net/lmj623565791/article/details/42094215)
+[ Android BitmapShader 实战 实现圆形、圆角图片](http://blog.csdn.net/lmj623565791/article/details/41967509)
 
 27.2 Bitmap的加载和Cache
 
@@ -417,31 +429,35 @@ http://www.jianshu.com/p/72d2e3491346
 http://www.jianshu.com/p/78c0a088fc2e
 
 ## 28.专业领域
-###28.1LBS应用:使用百度或高德地图的SDK遇到过的问题（国内外限制、精确度等）？
+### 28.1LBS应用:使用百度或高德地图的SDK遇到过的问题（国内外限制、精确度等）？
 
-28.1.1定位项目中，如何选取定位方案，如何平衡耗电与实时位置的精度？
+[高德地图使用](https://github.com/mazouri/SeniorAndroidDev/blob/master/android/thirdlibrary/%E9%AB%98%E5%BE%B7SDK%E4%BD%BF%E7%94%A8.md)
+
+### 28.1.1定位项目中，如何选取定位方案，如何平衡耗电与实时位置的精度？
 
 http://www.jianshu.com/p/72d2e3491346
 
-###28.2插件和热修复的原理:插件和热修复框架的原理，模块化开发方式，64K的方法数限问题.
+### 28.2插件和热修复的原理:插件和热修复框架的原理，模块化开发方式，64K的方法数限问题.
 
-###28.3消息推送:国内各个消息推送的使用问题？如何保持Service长活？Http长链接实现等
+### 28.3消息推送:国内各个消息推送的使用问题？如何保持Service长活？Http长链接实现等
 
 方案1、使用极光和友盟推送。
+
+[友盟推送官方文档](http://dev.umeng.com/push/android/integration)
 
 方案2、使用XMPP协议（Openfire + Spark + Smack）
 
 方案3、使用MQTT协议（更多信息见：http://mqtt.org/）
 
-###28.4视频直播
+### 28.4视频直播
 
-###28.5音乐
+### 28.5音乐
 
 28.5.1 如何加载的音乐信息，如何改善其效率
 
 参考：http://www.jianshu.com/p/5a8e09bcb769
 
-## 29.项目经验和职业规划
+## (yes)29.项目经验和职业规划
 
 29.1说说你的亮点，最值得分享的
 
@@ -463,9 +479,11 @@ http://www.jianshu.com/p/72d2e3491346
 
 #更多的
 
-## 30.RemoteViews
+## (yes)30.RemoteViews
 
-## 31.动画
+（开发艺术）
+
+## (yes)31.动画
 31.1 activity切换动画
 
 [activity切换动画](https://github.com/helen-x/AndroidInterview/blob/master/android/activity%E5%88%87%E6%8D%A2%E5%8A%A8%E7%94%BB.md)
@@ -482,9 +500,11 @@ http://www.jianshu.com/p/72d2e3491346
 
 http://www.jianshu.com/p/89f19d67b348
 
-## 32.Window和WindowManager
+## (yes)32.Window和WindowManager
 
-## 33.线程与线程池
+（开发艺术）
+
+## (yes)33.线程与线程池
 
 33.1 对android主线程的运用和理解
 
@@ -496,7 +516,7 @@ http://www.jianshu.com/p/78c0a088fc2e
 
 ## 34.JNI和NDK
 
-## 35.性能优化
+## (yes)35.性能优化
 
 35.1 怎样对 android 进行优化？
 
@@ -504,7 +524,7 @@ http://www.jianshu.com/p/72d2e3491346
 
 http://www.jianshu.com/p/89f19d67b348
 
-## 36.与服务器交互
+##(yes) 36.与服务器交互
 
 36.1 Android与服务器交互的方式中的对称加密和非对称加密是什么?
 
@@ -514,13 +534,13 @@ http://www.jianshu.com/p/72d2e3491346
 
 http://www.jianshu.com/p/89f19d67b348
 
-## 37.分包
+## (yes)37.分包
 
 37.1 MultiDex是怎么实现分包的，它的实现原理，多个dex是怎么加载的
 
 http://www.jianshu.com/p/78c0a088fc2e
 
-## 38.Apk瘦身
+## (yes)38.Apk瘦身
 
 http://www.jianshu.com/p/78c0a088fc2e
 
