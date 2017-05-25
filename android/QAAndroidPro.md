@@ -1,6 +1,15 @@
 # QAAndroidPro
 
 ## 1.Service启动方式
+
+解题思路：
+-　什么是Service
+- 哪两种启动方式
+- 两种启动方式的区别
+- 什么时候使用startService，什么时候使用bindService？
+- 两种启动方式对Service生命周期函数影响?
+- 对Service的认识，什么时候选择使用service（使用场景）
+
 ## 2.Activity生命周期；启动模式
 ## 3.如何自定义View;事件分发机制
 ## 4.Fragment生命周期
