@@ -105,6 +105,8 @@ https://github.com/mazouri/SeniorAndroidDev/tree/master/android/service
 
 3.2 Service有哪些启动方法，有什么区别，怎样停用Service？yes
 
+http://blog.csdn.net/iispring/article/details/47689819
+
 3.3 Service与Activity怎么实现通信？yes
 
 3.4 Service里面可以弹出 dialog 或 Toast 吗？
