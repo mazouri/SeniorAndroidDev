@@ -3,7 +3,8 @@
 ## 1.Service启动方式
 
 解题思路：
--　什么是Service
+
+- 什么是Service
 - 哪两种启动方式
 - 两种启动方式的区别
 - 什么时候使用startService，什么时候使用bindService？
