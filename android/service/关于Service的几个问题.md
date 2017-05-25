@@ -36,7 +36,7 @@
     当然也包含service的生命周期，那么与service不同的是，IntentService在执行onCreate操作
     的时候，内部开了一个线程，去你执行你的耗时操作。
 
-##Q6.1IntentService的原理
+## Q6.1IntentService的原理
     IntentService中提供了这么一个方法：
 ```
 protected abstract void onHandleIntent(Intent intent);
@@ -98,7 +98,7 @@ public void handleMessage(Message msg) {
     我们可以得出这样的结论：IntentService是通过Handler looper message的方式实现了一个
     多线程的操作，同时耗时操作也可以被这个线程管理和执行，同时不会产生ANR的情况。
 
-##Q6.2使用intentService与service有什么不同呢？（好处）
+## Q6.2使用intentService与service有什么不同呢？（好处）
     1.直接 创建一个默认的工作线程,该线程执行所有的intent传递给onStartCommand()以区别于
     应用程序的主线程
     2.直接创建一个工作队列,来逐个发送intent给onHandleIntent()
@@ -137,7 +137,7 @@ public void handleMessage(Message msg) {
     如果使用Service来解决这个问题，看似是比较完美的，不过就会涉及Activity（UI）和 Service
     的交互问题
 
-##Q7.1工作场景：如果我们有一个后台服务，是每隔一段时间请求一次服务器，类似于心跳服务，只是没有心跳服务那么频繁，例如每2个小时执行一次连接服务器操作，这样的话，我们的应用可能已经退出了，而我们仍需要这个服务时开启的，如何实现呢？
+## Q7.1工作场景：如果我们有一个后台服务，是每隔一段时间请求一次服务器，类似于心跳服务，只是没有心跳服务那么频繁，例如每2个小时执行一次连接服务器操作，这样的话，我们的应用可能已经退出了，而我们仍需要这个服务时开启的，如何实现呢？
 [链接](http://blog.csdn.net/baicaiye/article/details/53259156)
     
     思路：重写一个IntentService，仿效系统的IntentService，只是让线程执行完毕的时候，
