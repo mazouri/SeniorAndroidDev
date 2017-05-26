@@ -129,6 +129,8 @@ http://www.jianshu.com/p/89f19d67b348
 
 ## （yes）4.Fragment问题
 
+[Fragment全解析系列（一）：那些年踩过的坑](http://www.jianshu.com/p/d9143a92ad94)
+
 [Android -- Fragment 基本用法、生命周期与细节注意](http://www.jianshu.com/p/1ff18ec1fb6b)
 
 [深入一点 让细节帮你和Fragment更熟络](http://www.jianshu.com/p/acb7705df1a6)
