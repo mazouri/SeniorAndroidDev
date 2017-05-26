@@ -4,6 +4,8 @@
 
 解题思路：
 
+https://github.com/mazouri/SeniorAndroidDev/tree/master/android/service
+
 - 什么是Service
 - 哪两种启动方式
 - 两种启动方式的区别
@@ -12,6 +14,16 @@
 - 对Service的认识，什么时候选择使用service（使用场景）
 
 ## 2.Activity生命周期；启动模式
+
+http://blog.csdn.net/qq_26787115/article/details/52556842
+
+> 生命周期：典型情况下的生命周期？（四状态、七周期）异常情况下的生命周期？（系统配置发生改变、资源内存不足）
+
+> 四状态指：运行状态、暂停状态、停止状态、销毁状态
+
+> 启动模式：standard？singleTop？singTask？singleInstance？
+
+
 ## 3.如何自定义View;事件分发机制
 ## 4.Fragment生命周期
 ## 5.Handler机制
