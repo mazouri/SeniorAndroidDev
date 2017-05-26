@@ -66,7 +66,28 @@ http://www.jianshu.com/p/48464c1d5788
 
 
 ## 6.２个Activity间怎么传递参数
+
+> 三种方式？Intent、静态变量、setResult
+
+http://www.open-open.com/code/view/1434425514020
+
+
 ## 7.ListView优化
+
+> 四种优化方式：convertView的复用、ViewHolder的使用、使用分段加载、使用分页加载
+
+http://m.blog.csdn.net/article/details?id=51942479
+
+> ListView中图片的优化？
+
+http://blog.csdn.net/u010921385/article/details/52435203
+
+> RecyclerView卡顿优化：卡顿的原因？复杂布局的优化？图片加载的优化？滚动时优化？
+
+http://blog.csdn.net/likuan0214/article/details/51899400
+
+http://blog.csdn.net/likuan0214/article/details/51911873
+
 ## 8.AsyncTask
 ## 9.ScrollView嵌套ListView
 ## 10.内存泄露
