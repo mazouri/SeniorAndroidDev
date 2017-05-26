@@ -45,7 +45,26 @@ Activity对点击事件的分发过程？顶级View对事件的分发过程？Vi
 View的滑动冲突？
 
 ## 4.Fragment生命周期
+
+> Fragment有什么好处？Fragment有哪些坑及解决方法？
+
+http://www.jianshu.com/p/d9143a92ad94
+
+> Fragment传递数据？add/show/hide/replace区别及使用？FragmentManager？
+
+
 ## 5.Handler机制
+
+> Handler是什么？为什么要使用？基本用法？Handler原理？
+
+http://www.jianshu.com/p/76b44b1fabcc
+
+> 消息机制工作原理：ThreadLocal的工作原理？消息队列的工作原理？Looper的工作原理？Handler的工作原理？
+
+http://www.jianshu.com/p/48464c1d5788
+
+
+
 ## 6.２个Activity间怎么传递参数
 ## 7.ListView优化
 ## 8.AsyncTask
