@@ -124,7 +124,32 @@ http://www.cnblogs.com/zhaoyanjun/p/5981386.html
 
 
 ## 11.IPC;AIDL
+
+> 什么是IPC？
+
+IPC是Inter-Process Communication的缩写，含义是进程间通信或者跨进程通信，是指两个进程间进行数据交互的一个过程
+
+> IPC方式？使用Bundle、使用文件共享、使用Messenger、使用AIDL
+
+http://blog.csdn.net/qq_26787115/article/details/52863959
+
+> 使用ContentProvider?使用Socket?
+
+http://blog.csdn.net/qq_26787115/article/details/52894230
+
+
 ## 12.屏幕适配
+
+> 如何进行屏幕尺寸匹配？
+
+- 使得布局元素自适应屏幕尺寸（使用RelativeLayout、Linearlayout，使用"wrap_content"、"match_parent"和"weight“）
+- 根据屏幕的配置来加载相应的UI布局（layout-large、sw xxxdp，即small width的缩写、屏幕方向（values-land/values-port））
+- “图片资源”匹配
+
+- 以某一分辨率为基准，生成所有分辨率对应像素数列表
+
+http://www.jianshu.com/p/ec5a1a30694b
+
 ## 13.Bitmap优化
 ## 14.缓存
 ## 15.第三方库
