@@ -151,7 +151,23 @@ http://blog.csdn.net/qq_26787115/article/details/52894230
 http://www.jianshu.com/p/ec5a1a30694b
 
 ## 13.Bitmap优化
+
+> Bitmap的高效加载：BitmapFactory的decodeFile、decodeResource、decodeByteArray、decodeStream四种加载方法？BitmapFactory.Options缩放图片？
+
+> Bitmap导致的内存溢出解决：质量压缩、尺寸压缩
+
+http://blog.csdn.net/tyk0910/article/details/53462728?utm_source=tuicool&utm_medium=referral
+
 ## 14.缓存
+
+> 什么是LruCache？LinkedHashMap作为存储容器，并对各种操作进行计次
+
+http://www.jianshu.com/p/f32e5d435d6c
+
+> Android照片墙完整版，完美结合LruCache和DiskLruCache
+
+http://blog.csdn.net/guolin_blog/article/details/34093441/
+
 ## 15.第三方库
 
 > Dagger:什么是Dagger？什么是依赖注入？为什么使用Dagger？怎么使用Dagger？
@@ -195,6 +211,42 @@ http://www.cnblogs.com/wytiger/p/5996876.html
 > 什么是MVVM？各层是干什么的？例子？
 
 ## 18.排序
+
+> 冒泡排序
+
+> 插入排序
+
+http://blog.csdn.net/sysukehan/article/details/52661369
+
+> 选择排序
+
+http://blog.csdn.net/sysukehan/article/details/52661681
+
+> 快速排序
+
+http://blog.csdn.net/sysukehan/article/details/52661880
+
+
+
 ## 19.链表结构
+
+[List集合和LinkList的讲解](http://blog.csdn.net/androidstarjack/article/details/43763021)
+
 ## 20.线程与线程池
+
+> 主线程和子线程?几种线程形态（AsyncTask、HandlerThread、IntentService）线程池？ThreadPoolExecutor
+
+> 常见几种线程池：4个线程池：FixedThreadPool、CachedThreadPool、ScheduledThreadPool、SingleThreadExecutor
+
+http://www.jianshu.com/p/8265dba04f34
+
 ## 21.JNI
+
+- 创建接口类:在java中声明native方法
+- 编译接口类:编译java源文件得到class文件，然后通过javah命令导出jni头文件
+- 配置Android项目的NativeSupport：配置Android.mk：LOCAL_MODULE
+- 添加需要的函数：C/C++代码
+- 修改主程序：在java中调用
+
+
+http://www.2cto.com/kf/201409/330892.html
