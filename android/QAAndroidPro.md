@@ -109,6 +109,20 @@ http://blog.csdn.net/u010375364/article/details/51911316
 http://www.tuicool.com/articles/FzmU32b
 
 ## 10.内存泄露
+
+http://www.cnblogs.com/zhaoyanjun/p/5981386.html
+
+> 什么是内存泄漏？为什么会内存泄漏？
+
+> 5种内存泄漏及解决方案？
+
+- 新建线程引起的Activity内存泄漏
+- Activity添加监听器造成Activity内存泄漏
+- Handler 匿名内部类造成内存溢出？
+- AsyncTask造成内存泄漏
+- Timer Tasks 造成内存泄漏
+
+
 ## 11.IPC;AIDL
 ## 12.屏幕适配
 ## 13.Bitmap优化
