@@ -89,7 +89,25 @@ http://blog.csdn.net/likuan0214/article/details/51899400
 http://blog.csdn.net/likuan0214/article/details/51911873
 
 ## 8.AsyncTask
+
+> AsyncTask是什么？四个核心方法？ 工作原理？
+
+http://blog.csdn.net/xhbxhbsq/article/details/53610673
+
 ## 9.ScrollView嵌套ListView
+
+-->滑动冲突
+
+> 四种方案解决？手动设置ListView高度、使用单个ListView取代ScrollView中所有内容、使用LinearLayout取代ListView、自定义可适应ScrollView的ListView；四种方案的优缺点
+
+http://blog.csdn.net/u010375364/article/details/51911316
+
+> 问题一 ： 嵌套在 ScrollView的 ListVew数据显示不全，我遇到的是最多只显示两条已有的数据?
+
+> 问题二 、打开套有 ListVew的 ScrollView的页面布局 默认 起始位置不是最顶部
+
+http://www.tuicool.com/articles/FzmU32b
+
 ## 10.内存泄露
 ## 11.IPC;AIDL
 ## 12.屏幕适配
