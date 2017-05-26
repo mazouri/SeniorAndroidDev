@@ -25,6 +25,23 @@
 ## 13.Bitmap优化
 ## 14.缓存
 ## 15.第三方库
+
+> Dagger:什么是Dagger？什么是依赖注入？为什么使用Dagger？怎么使用Dagger？
+
+https://github.com/mazouri/SeniorAndroidDev/blob/master/android/thirdlibrary/dagger/Dagger%E9%97%AE%E9%A2%98.md
+
+> Retrofit、Butterknife注解部分源码解析
+
+http://www.trinea.cn/android/java-annotation-android-open-source-analysis/
+
+> ButterKnife 的实现思路
+
+http://www.itnose.net/detail/6643021.html
+
+> RxJava:什么是rxJava？RxJava中的三个角色？Observable的其他几种创建方法？rxJava的线程控制？rxjava实现类似AsyncTask功能？
+
+https://github.com/mazouri/SeniorAndroidDev/blob/master/android/thirdlibrary/rx/RxJava_RxAndroid%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8.md
+
 ## 16.设计模式
 
 https://github.com/mazouri/SeniorAndroidDev/blob/master/android/dp_in_android/README.md
