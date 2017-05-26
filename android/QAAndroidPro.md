@@ -25,6 +25,25 @@ http://blog.csdn.net/qq_26787115/article/details/52556842
 
 
 ## 3.如何自定义View;事件分发机制
+
+> 自定义View：4种自定义View的分类？4中案例？
+
+http://blog.csdn.net/qq_26787115/article/details/53428258
+
+> View的工作流程:measure、layout、draw
+
+http://blog.csdn.net/qq_26787115/article/details/53385645
+
+> 事件分发机制：
+
+http://blog.csdn.net/qq_26787115/article/details/53047914
+
+点击事件的传递规则？（dispatchTouchEvent、onInterceptTouchEvent、onTouchEvent）
+
+Activity对点击事件的分发过程？顶级View对事件的分发过程？View对点击事件的处理？
+
+View的滑动冲突？
+
 ## 4.Fragment生命周期
 ## 5.Handler机制
 ## 6.２个Activity间怎么传递参数
