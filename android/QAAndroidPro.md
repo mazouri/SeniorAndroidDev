@@ -27,6 +27,8 @@
 ## 15.第三方库
 ## 16.设计模式
 
+https://github.com/mazouri/SeniorAndroidDev/blob/master/android/dp_in_android/README.md
+
 > 什么是单例模式？几种实现方式？饿汉、懒汉、DCL、静态内部类、枚举
 
 > 什么是工厂方法模式？简单工厂、工厂方法、抽象工厂的区别？
@@ -37,7 +39,15 @@
 
 ## 17.MVP/MVVM
 
+http://www.cnblogs.com/wytiger/p/5996876.html
 
+> 为什么需要MVC，MVP和MVVM？
+
+> 什么是MVC？各层是干什么的？例子？
+
+> 什么是MVP？各层是干什么的？例子？
+
+> 什么是MVVM？各层是干什么的？例子？
 
 ## 18.排序
 ## 19.链表结构
