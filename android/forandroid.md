@@ -373,6 +373,10 @@ http://www.jianshu.com/p/089fb79e308b
 
 [概念 TCP/IP Socket Http Restful](http://www.jianshu.com/p/d198b3080432)
 
+[Android：这是一份很详细的Socket使用攻略](http://blog.csdn.net/carson_ho/article/details/53366856)
+
+23.1 写一下socket通信的大致代码？
+
 ## (yes)24.TCP／UDP／HTTP
 
 （HTTP书）
