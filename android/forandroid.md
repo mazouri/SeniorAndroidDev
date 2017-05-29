@@ -341,6 +341,20 @@ http://www.jianshu.com/p/89f19d67b348
 
 ## (yes)21.OOM问题
 
+[Android中的内存管理机制以及正确的使用方式](http://www.2cto.com/kf/201604/501892.html)
+
+[Android 内存管理 &Memory Leak & OOM 分析](http://blog.csdn.net/vshuang/article/details/39647167)
+
+[Android 内存优化 (防Memory Leak)](http://blog.csdn.net/vshuang/article/details/41381109)
+
+[Android代码内存优化建议-Java官方篇](http://androidperformance.com/2015/07/20/Android-Performance-Memory-Java.html)
+
+[Android代码内存优化建议-Android官方篇](http://androidperformance.com/2015/07/20/Android-Performance-Memory-Google.html)
+
+[Android代码内存优化建议-Android资源篇](http://androidperformance.com/2015/07/20/Android-Performance-Memory-AndroidResource.html)
+
+[Android代码内存优化建议-OnTrimMemory优化](http://androidperformance.com/2015/07/20/Android-Performance-Memory-onTrimMemory.html)
+
 21.1内存泄露哪几种情况？如何处理？有使用过什么相关的检测工具吗？
 
 http://www.jianshu.com/p/89f19d67b348
