@@ -44,6 +44,10 @@ Activity对点击事件的分发过程？顶级View对事件的分发过程？Vi
 
 View的滑动冲突？
 
+(增：如果父布局不处理事件，有多个子view，事件将交由哪个view处理？)
+
+(增：如果子View都不处理，最终事件将交由谁处理？-->都不处理交由activity处理（开发艺术p142）)
+
 ## 4.Fragment生命周期
 
 > Fragment有什么好处？Fragment有哪些坑及解决方法？
@@ -63,7 +67,11 @@ http://www.jianshu.com/p/76b44b1fabcc
 
 http://www.jianshu.com/p/48464c1d5788
 
+(增：looper阻塞后，有新消息时怎么唤醒looper继续执行的？)
 
+[Android消息机制1-Handler(Java层)](http://gityuan.com/2015/12/26/handler-message-framework/)
+
+[Android消息机制2-Handler(Native层)](http://gityuan.com/2015/12/27/handler-message-native/)
 
 ## 6.２个Activity间怎么传递参数
 
