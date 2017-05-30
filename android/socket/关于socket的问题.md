@@ -54,7 +54,7 @@ TCP协议是面向连接的协议，提供稳定的双向通信功能，TCP连�
 
 具体原理图如下：
 
-<img sec="http://upload-images.jianshu.io/upload_images/944365-8df0ed7afe6b32d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<img src="http://upload-images.jianshu.io/upload_images/944365-8df0ed7afe6b32d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
