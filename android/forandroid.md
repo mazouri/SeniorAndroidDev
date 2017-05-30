@@ -389,6 +389,8 @@ http://www.jianshu.com/p/089fb79e308b
 
 [Android：这是一份很详细的Socket使用攻略](http://blog.csdn.net/carson_ho/article/details/53366856)
 
+[UDP 和 TCP 的 socket 分别一般用在什么地方？](https://www.zhihu.com/question/20060141)
+
 23.1 写一下socket通信的大致代码？
 
 ## (yes)24.TCP／UDP／HTTP
@@ -626,10 +628,14 @@ http://www.jianshu.com/p/72d2e3491346
 
 http://www.jianshu.com/p/72d2e3491346
 
-3.怎么实现断点续传下载文件
+3.怎么实现断点续传下载文件（关键api: RandomAccessFile、http协议头部的Range字段）
 
-http://blog.csdn.net/wwj_748/article/details/20146869
+断点续传的原理就是通过http请求你想下载内容的字节范围，假如之前已经下载了一部分，但你有事需要暂停下载，那么下次下载的时候你接着后面继续下载就可以了
 
+
+[Android网络编程 --断点续传下载文件](http://blog.csdn.net/wwj_748/article/details/20146869)
+
+[Android实战：简易断点续传下载器实现](http://www.jianshu.com/p/5b2e22c42467)
 
 
 
