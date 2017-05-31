@@ -95,7 +95,9 @@ TCP释放连接需要四次挥手过程，现在假设A主动释放连接：（�
 
 此时，主机1和2已经无法进行通信：主机1无法发送数据给主机2，主机2也无法发送数据给主机1，此时，TCP的连接才算释放
 
+## TCP实例
 
+[Android Socket通信--TcpClient](http://www.jianshu.com/p/338a61ee5b42)
 
 
 
