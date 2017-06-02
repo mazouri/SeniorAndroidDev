@@ -355,6 +355,8 @@ http://www.jianshu.com/p/89f19d67b348
 
 [Android代码内存优化建议-OnTrimMemory优化](http://androidperformance.com/2015/07/20/Android-Performance-Memory-onTrimMemory.html)
 
+[ Android性能优化全方面解析](http://blog.csdn.net/sw950729/article/details/72124008#comments)
+
 21.1内存泄露哪几种情况？如何处理？有使用过什么相关的检测工具吗？
 
 http://www.jianshu.com/p/89f19d67b348
