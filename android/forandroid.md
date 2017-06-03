@@ -467,6 +467,14 @@ http://www.jianshu.com/p/72d2e3491346
 
 ### 28.3消息推送:国内各个消息推送的使用问题？如何保持Service长活？Http长链接实现等
 
+[史上最全解析Android消息推送解决方案](http://blog.csdn.net/carson_ho/article/details/52693242?locationNum=12)
+
+[ Android消息推送完美解决方案全析](http://blog.csdn.net/u014058619/article/details/22732149)
+
+[Android 几种消息推送方案总结](http://www.cnblogs.com/Joanna-Yan/p/6241354.html)
+
+[梁汝波：今日头条在消息推送逻辑详解](https://www.iamue.com/12601?utm_source=tuicool&utm_medium=referral)
+
 方案1、使用极光和友盟推送。
 
 [友盟推送官方文档](http://dev.umeng.com/push/android/integration)
@@ -474,6 +482,10 @@ http://www.jianshu.com/p/72d2e3491346
 方案2、使用XMPP协议（Openfire + Spark + Smack）
 
 方案3、使用MQTT协议（更多信息见：http://mqtt.org/）
+
+[Android开发之利用MQTT协议实现消息的即时推送](http://blog.csdn.net/qq_29196551/article/details/51488340)
+
+[自己解决基于MQTT的android推送](http://www.jianshu.com/p/cc0c6e1af4e0)
 
 ### 28.4视频直播
 
