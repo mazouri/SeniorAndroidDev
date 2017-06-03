@@ -1,5 +1,7 @@
 # 不同Android API版本中广播机制相关API重要变迁
 
+[Android中通过广播方式调起第三方App](https://www.baidufe.com/item/7434007d7e20f114b7fe.html)
+
 ## 从Android5.0/API 21开始,粘性广播(Sticky Broadcast)和有序粘性广播过期，以后不再建议使用。
 
 ## “静态注册的广播接收器即使app已经退出，主要有相应的广播发出，依然可以接收到”，但此种描述自Android 3.1开始有可能不再成立“
