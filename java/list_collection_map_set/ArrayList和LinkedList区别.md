@@ -2,6 +2,8 @@
 
 [http://pengcqu.iteye.com/blog/502676](http://pengcqu.iteye.com/blog/502676)
 
+[详解Java中ArrayList、Vector、LinkedList三者的异同点](https://my.oschina.net/zzw922cn/blog/491631)
+
 ## 关键字
 
 - ArrayList: 动态数组；适合随机访问；适合在列表最后进行插入和删除元素；set/get花费常数时间
