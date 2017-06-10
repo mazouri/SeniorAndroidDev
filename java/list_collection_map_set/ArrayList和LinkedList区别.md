@@ -2,6 +2,12 @@
 
 [http://pengcqu.iteye.com/blog/502676](http://pengcqu.iteye.com/blog/502676)
 
+## 关键字
+
+- ArrayList: 动态数组；适合随机访问；适合在列表最后进行插入和删除元素；
+- LinkedList：链表；适合插入和删除元素；适合按照顺序访问数据；
+
+
 ##  ArrayList和LinkedList的区别？
 - ArrayList是实现了基于**动态数组**的数据结构；LinkedList基于**链表**的数据结构
 - 对于随机访问get和set，ArrayList绝对优于LinkedList，因为LinkedList要移动指针
