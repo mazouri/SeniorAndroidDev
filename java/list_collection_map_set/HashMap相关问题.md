@@ -2,6 +2,8 @@
 
 [**必须要看**：HashMap实现原理及源码分析](http://www.cnblogs.com/chengxiao/p/6059914.html)
 
+[HashMap实现原理分析](http://blog.csdn.net/vking_wang/article/details/14166593)
+
 http://www.cnblogs.com/zywu/p/5753736.html
 
 http://www.admin10000.com/document/3322.html
