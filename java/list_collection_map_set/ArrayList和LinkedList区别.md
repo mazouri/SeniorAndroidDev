@@ -4,8 +4,8 @@
 
 ## 关键字
 
-- ArrayList: 动态数组；适合随机访问；适合在列表最后进行插入和删除元素；
-- LinkedList：链表；适合插入和删除元素；适合按照顺序访问数据；
+- ArrayList: 动态数组；适合随机访问；适合在列表最后进行插入和删除元素；set/get花费常数时间
+- LinkedList：链表；适合插入和删除元素；适合按照顺序访问数据；add/remove花费常数时间
 
 
 ##  ArrayList和LinkedList的区别？
