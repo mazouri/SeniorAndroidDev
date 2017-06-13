@@ -5,3 +5,7 @@
 - apply()没有返回值。apply()是将修改的数据提交给内存，而后异步真正的提交到硬件磁盘。效率更高。
 - 由于在一个进程中，sharedPreference是单实例，一般不会出现并发冲突，如果对提交的结果不关心的话，建议使用apply，当然需要确保提交成功且有后续操作的话，还是需要用commit的。
 - commit()、apply()两个方法的操作都是原子性的。
+
+## 关于apply方法引发ANR问题
+
+http://www.tuicool.com/articles/YfQjIr
