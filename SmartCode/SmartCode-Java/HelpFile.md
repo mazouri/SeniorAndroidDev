@@ -9,6 +9,8 @@
 [干货！LeetCode 题解汇总](http://www.jianshu.com/p/c86b62120f37)
 [每天一题LeetCode系列（有翻译，注释~）](http://www.jianshu.com/p/be0f6dba5847)
 
+[LeetCode 题目总结/分类](https://www.douban.com/note/330562764/)
+
 [Github1](https://github.com/gouthampradhan/leetcode)
 [Github2](https://github.com/kdn251/interviews)
 
