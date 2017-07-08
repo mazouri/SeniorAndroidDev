@@ -377,6 +377,8 @@ http://www.jianshu.com/p/89f19d67b348
 
 [ Android性能优化全方面解析](http://blog.csdn.net/sw950729/article/details/72124008#comments)
 
+[Android使用BitmapRegionDecoder加载超大图片方案](http://blog.csdn.net/jjmm2009/article/details/49360751)
+
 21.1内存泄露哪几种情况？如何处理？有使用过什么相关的检测工具吗？
 
 http://www.jianshu.com/p/89f19d67b348
@@ -690,6 +692,10 @@ http://www.jianshu.com/p/72d2e3491346
 7.系统自带的音视频有什么问题？
 
 8.线程安全
+
+9.静默安装
+
+https://v.qq.com/x/page/f0501jbulwc.html
 
 ## Java问题
 
