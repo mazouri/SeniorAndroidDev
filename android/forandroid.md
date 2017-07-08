@@ -584,6 +584,8 @@ http://www.jianshu.com/p/72d2e3491346
 
 http://www.jianshu.com/p/89f19d67b348
 
+[Android中RelativeLayout和LinearLayout性能分析](http://www.jianshu.com/p/8a7d059da746)
+
 ##(yes) 36.与服务器交互
 
 36.1 Android与服务器交互的方式中的对称加密和非对称加密是什么?
