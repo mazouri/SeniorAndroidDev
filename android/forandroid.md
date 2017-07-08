@@ -278,6 +278,12 @@ http://www.jianshu.com/p/72d2e3491346
 
 （开发艺术）
 
+[Android AIDL注意点](http://blog.csdn.net/ethanco/article/details/53890001)
+
+[Android开发aidl使用中linkToDeath和unlinkToDeath的使用](http://www.cnblogs.com/lipeineng/archive/2016/08/05/5740514.html)
+
+[ android-----关于通过AIDL注册监听之后无法解除监听的探索](http://blog.csdn.net/hzw19920329/article/details/51926913)
+
 ## (yes)16.android5，6，7，8
 16.1 各版本新特性
 
@@ -293,6 +299,18 @@ http://www.jianshu.com/p/89f19d67b348
 17.3 Binder机制
 
 http://www.jianshu.com/p/89f19d67b348
+
+17.4 dalvik进程\Linux进程\线程之间的区别
+
+[https://v.qq.com/x/page/a03916l1n7h.html](https://v.qq.com/x/page/a03916l1n7h.html)
+
+http://www.2cto.com/kf/201610/560461.html
+
+http://blog.csdn.net/xiaopihair123/article/details/53149136
+
+http://blog.sina.com.cn/s/blog_b2f4a415010194q3.html
+
+17.5
 
 ## (yes)18.热更新hotfix
 18.1 热布丁
