@@ -204,6 +204,8 @@ http://www.jianshu.com/p/72d2e3491346
 
 http://www.jianshu.com/p/89f19d67b348
 
+[深入理解为什么AsyncTask只能被执行一次](http://blog.csdn.net/lintcgirl/article/details/48440543)
+
 ## (yes)8.Android启动过程
 
 8.1启动一个程序，可以主界面点击图标进入，也可以从一个程序中跳转过去，二者有什么区别？
@@ -378,6 +380,10 @@ http://www.jianshu.com/p/89f19d67b348
 [ Android性能优化全方面解析](http://blog.csdn.net/sw950729/article/details/72124008#comments)
 
 [Android使用BitmapRegionDecoder加载超大图片方案](http://blog.csdn.net/jjmm2009/article/details/49360751)
+
+[LeakCanary核心原理源码浅析](http://blog.csdn.net/cloud_huan/article/details/53081120)
+
+[开源项目之LeakCanary源码分析](http://www.jianshu.com/p/5032c52c6b0a)
 
 21.1内存泄露哪几种情况？如何处理？有使用过什么相关的检测工具吗？
 
