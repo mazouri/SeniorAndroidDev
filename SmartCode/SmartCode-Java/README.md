@@ -1,5 +1,14 @@
 # SmartCode-Java
 
+# SimpleCode
+各数据结构的基本算法
+
+# Sort
+各排序算法
+
+# Search
+各查找算法
+
 # LeetCode 分类汇总
 
 - Array题目
