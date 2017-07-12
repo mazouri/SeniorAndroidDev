@@ -20,6 +20,23 @@ public class LinkedListSimpleCode {
             this.value = value;
             this.next = null;
         }
+
+        @Override
+        public String toString() {
+            //print value range from current node to end.
+            StringBuilder sb = new StringBuilder("(");
+            ListNode node = this;
+            do {
+                if (node == this) {
+                    sb.append("->");
+                }
+                sb.append(node.value);
+                node = node.next;
+            } while (node != null);
+
+            sb.append(")");
+            return sb.toString();
+        }
     }
 
     //2.链表长度
@@ -676,6 +693,110 @@ public class LinkedListSimpleCode {
         return mergeHead.next;
     }
 
+    //15.链表首尾交叉排序
+
+    /**
+     * 链表首尾交叉排序
+     *
+     * 思路：链表断为两端，后段逆序，再将两段交叉排序
+     *      断为两段：快慢指针
+     *
+     * @param head
+     * @return
+     */
+    /*public static ListNode reorderList(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        //找到中间节点，断开
+        ListNode fast = head;
+        ListNode slow = head;
+        ListNode preSlow = head;
+        while (fast != null && fast.next != null) {
+            preSlow = slow;
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        preSlow.next = null;
+
+        //现在就有前半段head和后半段slow
+        //逆序后半段 11.单链表的逆序 reverseList
+        //此处用迭代的方式
+        ListNode preNode = null;
+        while (slow != null) {
+            ListNode newHead = slow;
+            slow = slow.next;
+
+            newHead.next = preNode;
+            preNode = newHead;
+        }
+        //slow遍历完后，得到一个preNode的链表
+        //即为slow的逆序链表
+
+        //此时得到前半段的head和后半段逆序的preNode
+//        System.out.println("len(head):" + len(head));
+//        System.out.println("len(preNode):" + len(preNode));
+//        System.out.println("head.toString:" + head.toString());
+//        System.out.println("preNode.toString:" + preNode.toString());
+        //将这两个交叉合并即可
+        ListNode curNode = head;
+        ListNode mergeNode = curNode;
+        while (curNode != null && preNode != null) {
+            ListNode tmp = curNode.next;
+            curNode.next = preNode;
+            preNode = preNode.next;
+            curNode.next.next = tmp;
+            curNode = tmp;
+            tmp = curNode.next;
+        }
+
+        return mergeNode;
+    }*/
+
+    public static ListNode reorderList2(ListNode head) {
+        ListNode fast = head;
+        ListNode slow = head;
+        // 找到中间节点
+        while(fast!=null && fast.next!=null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+
+        ListNode preReverse = slow; // preReverse不用翻转，因为它永远在最后一个
+        if(preReverse == null)
+            return head;
+
+        // 翻转后半段:preReverse不用翻转，因为它永远在最后一个,因此它后面的作为后半段
+        ListNode reHead = preReverse.next;
+        if(reHead == null)
+            return head;
+
+        ListNode preCur = reHead.next;
+        ListNode cur = reHead.next;
+        reHead.next = null;
+        while(cur != null) {
+            cur = cur.next;
+            preCur.next = reHead;
+            reHead = preCur;
+            preCur = cur;
+        }
+        preReverse.next = reHead;
+
+        // 交叉合并两个链表
+        preReverse.next = null;     // 断开前半段和翻转后的后半段元素
+        cur = head;
+        while(reHead != null && cur!=null) {
+            ListNode tmp = cur.next;
+            cur.next = reHead;
+            reHead = reHead.next;
+            cur.next.next = tmp;
+            cur = tmp;
+//            tmp = cur.next;
+        }
+        return head;
+    }
+
     public static void main(String[] args) {
         ListNode head = new ListNode(0);
         head.next = new ListNode(1);
@@ -701,7 +822,17 @@ public class LinkedListSimpleCode {
 //        temp.next = new ListNode(5);
 //        System.out.println(temp.next.value+"\n" + head.next.value);
 
-        System.out.println(mergeSortedList(head, head2).value);
+//        System.out.println(mergeSortedList(head, head2).value);
+
+        ListNode reorderList = reorderList2(head);
+//        System.out.println("reorderList.toString:" + reorderList.toString());
+        System.out.println(reorderList.value);
+        System.out.println(reorderList.next.value);
+        System.out.println(reorderList.next.next.value);
+        System.out.println(reorderList.next.next.next.value);
+        System.out.println(reorderList.next.next.next.next.value);
+        System.out.println(reorderList.next.next.next.next.next.value);
+        System.out.println(reorderList.next.next.next.next.next.next.value);
     }
 
 }
