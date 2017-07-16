@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mazouri.smartcode_android">
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,7 +20,8 @@
             android:name=".activity.BasicActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity android:name=".thread_threadpool.loader.LoaderActivity" />
-        <activity android:name=".activity.LockTaskActivity"></activity>
+        <activity android:name=".activity.LockTaskActivity" />
+        <activity android:name=".third_library.eventbus.EventBusActivity"></activity>
     </application>
 
 </manifest>

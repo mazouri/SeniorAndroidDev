@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import com.mazouri.smartcode_android.activity.BasicActivity;
 import com.mazouri.smartcode_android.activity.LockTaskActivity;
+import com.mazouri.smartcode_android.third_library.eventbus.EventBusActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,5 +33,10 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.go_locktask)
     void goLockTask() {
         startActivity(new Intent(this, LockTaskActivity.class));
+    }
+
+    @OnClick(R.id.go_eventbus)
+    void goEventBus() {
+        startActivity(new Intent(this, EventBusActivity.class));
     }
 }

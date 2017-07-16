@@ -36,4 +36,13 @@
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteY="16dp" />
 
+    <Button
+        android:id="@+id/go_eventbus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="EventBus"
+        app:layout_constraintTop_toBottomOf="@+id/go_basic"
+        tools:layout_editor_absoluteX="56dp" />
+
 </android.support.constraint.ConstraintLayout>
