@@ -41,6 +41,10 @@ public class EventType {
 
     @Override
     public int hashCode() {
-        return ;
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + (paramClass == null ? 0 : paramClass.hashCode());
+        result = prime * result + (type == null ? 0 : type.hashCode());
+        return result;
     }
 }

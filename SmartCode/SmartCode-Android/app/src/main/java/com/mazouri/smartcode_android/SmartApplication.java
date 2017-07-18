@@ -13,16 +13,25 @@ import android.util.Log;
 public class SmartApplication extends Application {
     public static final String TAG = SmartApplication.class.getSimpleName();
 
+    public static Context mInstance;
+
+    public static Context getInstance() {
+        return mInstance;
+    }
+
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         Log.d(TAG, "attachBaseContext called");
+
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
         Log.d(TAG, "onCreate called");
+
+        mInstance = this;
     }
 
     @Override

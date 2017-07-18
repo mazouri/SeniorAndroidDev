@@ -17,5 +17,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface Subscriber {
 
-    String type() default
+    String type() default EventType.DEFAULT_TYPE;
 }

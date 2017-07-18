@@ -1,4 +1,4 @@
-package javaart;
+package javaart.outer_inner_class;
 
 /**
  * Created by wangdongdong on 17/7/12.
@@ -11,7 +11,7 @@ public class OuterClass {
     class InnerClass {
         //private static String age; //普通内部类不能定义静态成员或静态方法， 只有静态内部类才可以
         public String name;
-        /*public static int getAge() { //inner classes cannot have static declarations
+        /*public static int getCount() { //inner classes cannot have static declarations
             return 20;
         }*/
 

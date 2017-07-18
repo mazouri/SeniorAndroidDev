@@ -53,7 +53,7 @@ public class Book implements Cloneable, Serializable {
         return name;
     }
     /*
-      public java.lang.String getName();
+      public java.lang.String getSignalName();
         Code:
            0: aload_0
            1: getfield      #2                  // Field name:Ljava/lang/String;
@@ -64,7 +64,7 @@ public class Book implements Cloneable, Serializable {
         this.name = name;
     }
     /*
-      public void setName(java.lang.String);
+      public void setSignalName(java.lang.String);
         Code:
            0: aload_0
            1: aload_1
