@@ -1,6 +1,13 @@
 # java基础问题
 
 1. String类为什么是final的。
+> 答：1.安全性：由于String类不能被继承，所以就不会被修改，这就避免了因为继承引起的安全隐患
+2.String类在程序中出现的频率比较高，如果为了避免安全隐患，在它每次出现时都用final来修饰，这无疑会降低程序的执行效率，所以干脆直接将其设为final一提高效率
+
+[参考](https://www.cnblogs.com/hellowhy/p/6536590.html)
+[知乎问答](https://www.zhihu.com/question/31345592)
+
+> StringBuffer可以看做是可变的字符串
 
 2. HashMap的源码，实现原理，底层结构。
 
@@ -45,3 +52,9 @@
 23. rehash
 
 24. hashCode() 与 equals() 生成算法、方法怎么重写
+
+25.写一个Java的死锁程序
+
+[Java的死锁程序](https://www.cnblogs.com/mudao/p/5867107.html)
+
+> 解决死锁：使用锁时使用相同的顺序
