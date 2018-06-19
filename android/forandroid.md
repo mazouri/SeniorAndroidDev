@@ -26,6 +26,10 @@ JNI和NDK、性能优化、Apk瘦身、java虚拟机
 
 [如何构建Android MVVM应用框架](http://www.open-open.com/lib/view/open1487924345584.html)
 
+1.3写一个MVP代码
+[代码案例](http://www.jcodecraeer.com/a/anzhuokaifa/2017/1020/8625.html?1508484926)
+[代码案例2](https://www.jianshu.com/p/9d40b298eca9)
+
 ## 2.Activity问题
 
 2.1 说说Activity生命周期？
