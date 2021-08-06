@@ -1,0 +1,4 @@
+# IPv4-IPv6
+
+## Android 在 4G 下访问 IPV6 慢的解决方案（——>重写okhttp的dns::lockup方法，不使用IPV6）
+[https://www.cnblogs.com/feshfans/p/10269629.html](https://www.cnblogs.com/feshfans/p/10269629.html)
