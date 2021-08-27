@@ -1,0 +1,101 @@
+# ViewModel源码解析
+> 关键字：ViewModel、onCleared、ViewModelProvider（s）、ViewModelStoreOwer、ViewModelStore、clear
+
+## 重要类&关键代码
+### 1.ViewModel
+```
+public abstract class ViewModel {
+    protected void onCleared() {
+    }
+}
+```
+- 抽象类
+- 只有一个方法onCleared()，用于需要回收ViewModel的时候调用，避免内存泄漏
+> ViewModel#onClear()被调用过程:
+> ViewModel的onClear()方法是在Activity被销毁被回调，即通过监听Activity的Lifecycle实现。当生命周期为onDestory时，会去调用ViewModelStore的clear()方法，在该方法中会遍历集合中的ViewModel对象，并依次调用其onClear()方法，最后，再将集合清空
+
+#### ViewModel作用
+- 为Activity或者Fragment准备和管理数据
+- 处理Activity或者Fragment与其他业务逻辑模块的交互
+- 处理同一个Activity中多个Fragment之间的交互，因为他们获取的是同一个activity对应的ViewModel实例
+- 强调一点：ViewModel只是针对于页配置变更时，ViewModel能够实现复用，对于因内存不足或者因为电量不足导致页面被回收情况，是无法实现ViewModel复用的，此时就需要ViewModel配合SavedState实现，它将承担起ViewModel与onSaveIntanceState之间通信的桥梁
+
+#### ViewModel生命周期
+在Activity创建时通过调用ViewModelProviders创建，在activity处于finished状态时销毁，即会调用onCleared()
+> 这也解释了，为什么旋转屏幕activity走onDestroy了，而ViewModel不会销毁
+
+#### ViewModel数据管理
+ViewModel通常通过使用LiveData或者DataBinding，实现暴露数据给Activity或者Fragment进行监听，当然也可以利用观察者模式自己实现类似的数据监听功能
+
+ViewModel不应该持有Activity或者Fragment的引用
+
+### 2.ViewModelProvider
+```
+public class ViewModelProvider {
+    ...
+    public ViewModelProvider(@NonNull ViewModelStoreOwner owner, @NonNull Factory factory) {
+        this(owner.getViewModelStore(), factory);
+    }
+    ...
+    public <T extends ViewModel> T get(@NonNull Class<T> modelClass){...}
+
+    public interface Factory {
+        <T extends ViewModel> T create(@NonNull Class<T> modelClass);
+    }
+
+    public static class NewInstanceFactory implements Factory {
+        public <T extends ViewModel> T create(@NonNull Class<T> modelClass){...}
+    }
+
+    public static class AndroidViewModelFactory extends ViewModelProvider.NewInstanceFactory {
+        public <T extends ViewModel> T create(@NonNull Class<T> modelClass){...}
+    }
+}
+```
+- 提供创建ViewModel对象的入口
+- 它的构造方法需要传入一个ViewModelStoreOwner对象和一个Factory对象
+- 通过工厂模式完成对ViewModel实例的创建
+
+### 3.ViewModelStoreOwner
+```
+public interface ViewModelStoreOwner {
+    @NonNull ViewModelStore getViewModelStore();
+}
+```
+- 接口
+- 表明自己是一个ViewModelStore的拥有者(owner)
+- Activity/Fragment均继承了这个接口，在Activity/Fragment中，可以通过getViewModelStore()方法获取与其关联的ViewModelStore对象
+
+####作用
+实现了ViewModelStoreOwner接口，就要拥有一个ViewModelStore实例，并且在生命周期结束时，调用ViewModelStore#clear()方法
+
+### 4.ViewModelStore
+```
+public class ViewModelStore {
+
+    private final HashMap<String, ViewModel> mMap = new HashMap<>();
+
+    final void put(String key, ViewModel viewModel) {
+        ViewModel oldViewModel = mMap.put(key, viewModel);
+        if (oldViewModel != null) {
+            oldViewModel.onCleared();
+        }
+    }
+
+    final ViewModel get(String key) {
+        return mMap.get(key);
+    }
+
+    public final void clear() {
+        for (ViewModel vm : mMap.values()) {
+            vm.onCleared();
+        }
+        mMap.clear();
+    }
+}
+```
+- 是一个ViewModel实例存储仓库，它内部维护了一个HashMap集合，实现存储多个ViewModel实例
+- 在Activity/Fragment中，可以通过调用其getViewModelStore()方法来获取与之关联的ViewModelStore对象
+
+
+
